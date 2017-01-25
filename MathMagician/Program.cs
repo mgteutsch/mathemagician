@@ -10,6 +10,31 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("What would you like for me to do?");
+            Console.WriteLine(""); // "How" you provide the user useful info is up to you.
+            // Think, "How will the user pick a command?"
+            // Is it better to modify the original question? Make it more useful?
+
+            string command = Console.ReadLine();
+            // ONce I have the command, how do I check it?
+            // Is it a valid command?
+
+
+            // When should you actually create an instance of your number class? Now or later?
+            Console.WriteLine("How many should I print?");
+
+            string how_many = Console.ReadLine();
+
+            // When do I check if the "How Many" response is too big?
+            // Remember, the istructions say no more than 30
+            // If the number is >30, how do I responds AND exit the program?
+
+            Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+
+            // Okay, let's print some stuff:
+
+            Console.WriteLine("Press any key to exit...");
+
         }
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MathMagician.Numbers
 {
-    class EvenNumber : Integer
+    class EvenNumber : Integer //NaturalNumber?
     {
         private int First { get; set; }
-
+        
         public EvenNumber()
         {
             this.First = 2;

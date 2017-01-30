@@ -4,33 +4,28 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MathMagician.Numbers;
 
-
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class NaturalNumberTests
+    public class EvenNumberTests
     {
-        // This is a sanity check
-        // Ensures everything is hooked up correctly AND
-        // that the permissions are correct.
-
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            NaturalNumber naturalNumber = new NaturalNumber();
+            EvenNumber evenNumber = new EvenNumber();
 
-            Assert.IsNotNull(naturalNumber);
+            Assert.IsNotNull(evenNumber); 
         }
 
         [TestMethod]
-        public void EnsureOneIsTheFirstNumber()
+        public void EnsureTwoIsTheFirstNumber()
         {
-            // Arrange (Where you set stuff up)
-            NaturalNumber naturalNumber = new NaturalNumber();
+            // Arrange
+            EvenNumber evenNumber = new EvenNumber();
 
-            // Act (Call the method that you are testing)
-            int expectedResult = 1;
-            int actualResult = naturalNumber.GetFirst();
+            // Act
+            int expectedResult = 2;
+            int actualResult = evenNumber.GetFirst();
 
             //Assert (Check the output of your method)
             Assert.AreEqual(expectedResult, actualResult);
@@ -47,7 +42,7 @@ namespace MathMagicianTests.Numbers
             //int myNum; --> default is zero "0"
 
             //This intentionally fails I guess?:
-            int actualResult = naturalNumber.GetNext(3);
+            //int actualResult = naturalNumber.GetNext(3);
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -64,7 +59,7 @@ namespace MathMagicianTests.Numbers
             int[] actualResult = naturalNumber.GetSequence(10);
 
             // Assert
-            Assert.AreEqual(expectedResult.Length, actualResult.Length);    
+            Assert.AreEqual(expectedResult.Length, actualResult.Length);
         }
 
         [TestMethod]
